@@ -1,0 +1,262 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?iia06g');
+    src: url('../fonts/icomoon.eot?iia06g#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?iia06g') format('truetype'),
+        url('../fonts/icomoon.woff?iia06g') format('woff'),
+        url('../fonts/icomoon.svg?iia06g#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    font-style: normal;
+
+}
+
+input {
+    outline: none;
+}
+
+body {
+    background: linear-gradient(to right, #B0C4DE, #6495ED);
+}
+
+.container {
+    width: 70%;
+    margin: 80px auto;
+    background-color: #fff;
+    box-shadow: 5px 4px 8px #708090;
+    border-radius: 8px;
+}
+
+/* 头部区域 */
+.header {
+    height: 60px;
+    border-bottom: 3px solid #B0C4DE;
+    font-family: consolas;
+}
+
+.calender {
+    float: left;
+    width: 30%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.calender dt {
+    width: 200px;
+    height: 57px;
+    line-height: 66px;
+    text-align: center;
+    color: #465360;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+.cal-drop {
+    display: none;
+    position: absolute;
+    top: 57px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 150px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #6495ED;
+    border-radius: 5%;
+    z-index: 99;
+    box-shadow: 1px 3px 6px #708090;
+    transition: all 1s;
+}
+
+.cal-weekdays {
+    height: 25px;
+    line-height: 25px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.cal-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px 1px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.calendar-days div {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.current-date {
+    color: #fff;
+    font-weight: 700;
+    background-color: #6495ED;
+    border-radius: 6px;
+}
+
+.today {
+    float: right;
+    width: 70%;
+    height: 100%;
+    line-height: 60px;
+    text-align: center;
+}
+
+.today span {
+    font-size: 14px;
+    color: #465360;
+}
+
+.list-main {
+    height: 510px;
+}
+
+/* 左侧分类列表栏 */
+.list-left {
+    float: left;
+    width: 30%;
+    height: 100%;
+    border-right: 2px solid #B0C4DE;
+    background-color: rgb(240, 247, 255);
+    border-bottom-left-radius: 8px;
+}
+
+.id-card {
+    height: 80px;
+    border-bottom: 1px solid #B0C4DE;
+}
+
+.id-card img {
+    float: left;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 17px 10px 17px 25px;
+}
+
+.id-card h5 {
+    padding-top: 20px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.id-card span {
+    font-size: 12px;
+    color: #708090;
+}
+
+.list-type {
+    margin: 20px 1px;
+    position: relative;
+}
+
+.list-type ul li {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 50px;
+}
+
+.list-type ul li:hover {
+    cursor: pointer;
+    background-color: rgba(100, 148, 237, 0.6);
+}
+
+.list-type .type-current {
+    background-color: #fff;
+    border-left: 5px solid #6495ED;
+    padding-left: 45px;
+}
+
+/* 右侧任务内容栏 */
+.list-right {
+    float: left;
+    width: 70%;
+    padding: 20px 30px;
+    background-color: #fff;
+}
+
+.list-right h3 {
+    line-height: 45px;
+    color: #333;
+}
+
+.list-item {
+    width: 100%;
+    height: 415px;
+    display: none;
+}
+
+.list-item ul li {
+    position: relative;
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    border-radius: 8px;
+    background-color: rgba(236, 241, 248, 0.5);
+}
+
+.list-item ul li i {
+    font-family: 'icomoon';
+    font-size: 18px;
+    color: #6495ED;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.list-item ul li a {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-family: 'icomoon';
+    font-size: 20px;
+    color: #6495ED;
+}
+
+/* 添加新任务模块 */
+.newtask input {
+    width: 400px;
+    height: 28px;
+    text-indent: 2.5em;
+    font-size: 14px;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.newtask {
+    position: relative;
+}
+
+.newtask::before {
+    content: '\e900';
+    font-family: 'icomoon';
+    font-size: 26px;
+    color: #B0C4DE;
+    position: absolute;
+    top: 0;
+    left: 2px;
+}
